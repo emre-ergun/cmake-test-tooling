@@ -13,6 +13,8 @@ set(CMAKE_CXX_STANDARD            17)
 set(CMAKE_CXX_STANDARD_REQUIRED   ON)
 set(CMAKE_CXX_EXTENSIONS          OFF)
 
+option(ENABLE_TESTING "Enable a Unit Testing Build" ON)
+
 option(COMPILE_EXECUTABLE "Whether to compile the executable" ON)
 
 set(LIBRARY_NAME "Library")
@@ -72,3 +74,5 @@ if (COMPILE_EXECUTABLE)
 else()
     message("W/o executable compiling")
 endif()
+
+add_subdirectory(tests)
